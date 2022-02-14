@@ -8,9 +8,8 @@ const circle = document.querySelector("#circle");
 
 const radiusCircle = function(event) {
   rangeSpan.textContent = event.target.value + "%";
-  if (event.type === "change") {
-    circle.style = "width: " + event.target.value + "%; height: " + event.target.value + "%;"
-  }
+  circle.style = "width: " + event.target.value + "%; height: " + event.target.value + "%;"
+  
 };
 
 btn.addEventListener("click", function () {
@@ -25,4 +24,7 @@ insideButton.addEventListener("click", function () {
 });
 
 range.addEventListener("input", radiusCircle);
-range.addEventListener("change", radiusCircle);
+
+
+rangeSpan.textContent = range.value + "%";
+circle.style = "width: " + range.value + "%; height: " + range.value + "%;"
